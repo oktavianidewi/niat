@@ -1,0 +1,64 @@
+CLUSTER POSTS OF EACH USER
+[  4.61724041e-01   1.91716270e-01   1.79723404e+02]
+PostTextSubjectivity	PostTextPolarity	PostTextLength
+
+C:\Python27\python.exe D:/kaggle/niat/kmeans_3features_plot.py
+user id  262
+lebar data  47
+[[  3.91452991e-01   2.20299145e-01   2.69743590e+01] di spss cluster 2
+ [  5.63852356e-01   5.33938020e-02   3.97666667e+02] di spss cluster ?
+ [  3.98916667e-01   7.90833333e-02   1.88800000e+02]] ?
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0
+ 0 0 0 0 0 2 2 2 0 1]
+user id  35
+lebar data  28
+[[  4.43080357e-01   1.34151786e-01   7.67500000e+01] di spss cluster 3
+ [  4.09740260e-01   2.69588745e-01   2.14761905e+01] di spss cluster 1
+ [  4.60542929e-01   1.17436869e-01   1.62666667e+02]] di spss cluster 2
+[1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 1 0 2 0 0 1 1 2 1 0]
+user id  400
+lebar data  0
+user id  68
+lebar data  158
+[[  3.61154964e-01   1.64064673e-01   6.19800000e+01] di spss cluster 2
+ [  4.61724041e-01   1.91716270e-01   1.79723404e+02] di spss cluster 1
+ [  4.48771153e-01   1.74375738e-01   3.38909091e+02]] di spss cluster 3
+[0 0 0 1 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 2 2 0 0 1 1 0 1 1 2 0 0 0 0 0 0 0
+ 0 0 0 2 0 0 2 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 1 1 0 0 2 1 0 0 0 1 0 1 1 1
+ 0 1 0 1 0 1 1 0 0 0 0 1 1 0 1 0 0 0 2 0 1 0 0 0 0 0 1 1 0 1 0 0 0 0 0 1 1
+ 2 0 0 0 1 1 1 0 1 0 1 0 0 0 0 2 1 0 0 1 1 0 0 1 0 1 1 0 0 0 1 0 0 0 1 1 1
+ 1 2 1 1 0 1 0 0 0 0]
+user id  16
+lebar data  0
+
+Process finished with exit code 0
+
+A user with user ID 262
+has 47 posts 
+we tried to cluster the posts based on its PostTextSubjectivity, PostTextPolarity and PostTextLength value, with k value = 3. we obtained 3 clusters with centroid value of each clusters are defined : 
+
+[[  3.91452991e-01   2.20299145e-01   2.69743590e+01] di spss cluster 2
+ [  5.63852356e-01   5.33938020e-02   3.97666667e+02] di spss cluster ?
+ [  3.98916667e-01   7.90833333e-02   1.88800000e+02]] ?
+
+ the list contains centroid value of each cluster of PostTextSubjectivity, PostTextPolarity, PostTextLength respectively. 
+
+ There are 47 posts which have different cluster group, for example: 
+
+ [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 2 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0
+ 0 0 0 0 0 2 2 2 0 1]
+
+We can see that the posts are labeled with 3 clusters. How to obtain a single row value that represent the centroid of all the posts? Should we take the cluster group 0 as the representative centroid or take an average between all centroid posts?
+
+The cluster group 0 has the most number of posts,
+
+If we want to get the mean and variance of the PostTextSubjectivity, PostTextPolarity, PostTextLength, why don't we use the mean/median and variance formula?
+If it is becouse the distribution of each users' posts are not normal, 
+I think we can still follow Central Theorema Limit rule. 
+This rule allows us to assume that the distribution of the sample is normal if the sample is more than 30. In this case, users are mostly have more than 30 posts. 
+
+
+CLUSTER ALL THE POSTS TOGETHER
+the same problem will raise. one user may have more than 1 cluster label for their posts. How to decide the cluster that representative?
+
+Next Tasks: Complete the PPT for Thursday!
